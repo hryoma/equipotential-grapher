@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Equipotential</title>
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+
+  <!-- Equipotential CSS/JS -->
+  <link rel="stylesheet" type="text/css" href="css/equipotential.css">
+  <script src="js/equipotential.js" defer></script>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- Plotly -->
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+</head>
+
+<body>
+
+<main class="content">
+  <section id="info-section">
+    <div class="container">
+      <h1 style="text-align: center;">Equipotential</h1>
+      <br>
+      <p><b><u>Instructions:</u></b></p>
+      <ol>
+        <li>Click and drag as the protons onto the gridded field to create a design
+          <ul>
+            <li>To delete a charge, simply drag it up to the top</li>
+            <li>To clear the field, click on the Reset button</li>
+          </ul>
+        </li>
+        <li>Click the "Visualize" button to create an interactive 3D contour plot</li>
+        <li>Rotate, pan, zoom, and take a screenshot using the plot's tools</li>
+        <li>Click on "Download CSV" to download a CSV file, which can be viewed with Excel or Google Sheets</li>
+      </ol>
+      <br>
+    </div>
+  </section>
+  <section id="interactive-section">
+    <div class="container">
+      <div class="interactive">
+        <div class="charges">
+          <div class="generator">
+            <span class="proton"></span>
+          </div>
+          Proton
+          <span style="margin: auto 20px;"></span>
+          <div class="generator">
+            <span class="electron"></span>
+          </div>
+          Electron
+          <span class="reset-btn" onclick="clearField()">Reset</span>
+        </div>
+        <div id="field"></div>
+      </div>
+    </div>
+  </section>
+  <section id="visualize-section">
+    <div class="btn" onclick="createSurfacePlot()">
+      Visualize
+    </div>
+    <span style="margin: auto 20px;"></span>
+    <div class="btn" onclick="exportCSV()">
+      Download CSV
+    </div>
+    <div id="graph"></div>
+  </section>
+  <section>
+    <div class="container">
+      <br>
+      <br>
+      <p><b><u>How it works:</u></b></p>
+      <ul>
+        <li>Equation: V = kQ/r
+          <ul>
+            <li>k = 8.987551792 * 10<sup>9</sup> N*m<sup>2</sup>/C<sup>2</sup></li>
+            <li>Q = charge of proton/electron
+              <ul>
+                <li>p = 1.6021766 * 10<sup>-19</sup> C</li>
+                <li>e = -1.6021766 * 10<sup>-19</sup> C</li>
+              </ul>
+            </li>
+            <li>r = distance
+              <ul>
+                <li>1 pixel = 1 picometer (10<sup>-12</sup> meters)</li>
+                <li>Each measurement taken 3 pixels apart</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Interactive field created using draggable and droppable from JQuery</li>
+        <li>Electric potentials calculated using JavaScript</li>
+        <li>Surface plot created using Plotly, an open source graphing library</li>
+      </ul>
+    </div>
+  </section>
+</main>
+</body>
+
+</html>

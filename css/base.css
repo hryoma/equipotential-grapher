@@ -1,0 +1,121 @@
+:root {
+    /* Primary Colors */
+    --c-primary-1: #19283c;
+    --c-primary-2: #253d5b;
+    --c-primary-3: #51767a;
+    --c-primary-4: #e4e3e3;
+
+    /* Accent Color */
+    --c-accent: #f6c054;
+
+    /* Text Colors */
+    --c-primary-text: #cad7e9;
+    --c-secondary-text: #b3c1d4;
+    --c-hyperlink-text: #4f98a0;
+
+    /* Font Sets */
+    --font-normal: "Avenir", "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    --font-monospace: "Menlo", Courier, monospace;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--c-primary-text);
+    font-family: var(--font-normal);
+    background-color: var(--c-primary-1);
+    margin: 0;
+}
+
+/* Font Styles */
+
+h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+
+h1 { font-size: calc(2rem + 1.5vw); }
+
+@media (min-width: 1200px) {
+    h1 { font-size: 2.5rem; }
+}
+
+h2 { font-size: calc(1.4rem + 0.9vw); }
+
+@media (min-width: 1200px) {
+    h2 { font-size: 2rem; }
+}
+
+h3 { font-size: calc(1.3rem + 0.6vw); }
+
+@media (min-width: 1200px) {
+    h3 { font-size: 1.75rem; }
+}
+
+h4 { font-size: calc(1.275rem + 0.3vw); }
+
+@media (min-width: 1200px) {
+    h4 { font-size: 1.5rem; }
+}
+
+h5 { font-size: 1.25rem; }
+
+h6 { font-size: 1rem; }
+
+a {
+    color: var(--c-hyperlink-text);
+}
+a:hover {
+    color: var(--c-accent);
+}
+
+
+/* Container Styles */
+
+.container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Main Content Area Styles */
+
+main.content {
+    padding: 60px 0;
+}

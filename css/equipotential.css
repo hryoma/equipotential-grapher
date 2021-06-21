@@ -1,0 +1,82 @@
+.interactive {
+    padding: 0;
+    width: auto;
+    border-radius: 15px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.charges {
+    background-color: var(--c-primary-2);
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    padding: 10px 20px;
+}
+.generator {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+.reset-btn {
+    float: right;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.proton, .electron, .charge-wrapper {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.proton {
+    background-color: firebrick;
+}
+.electron {
+    background-color: steelblue;
+}
+
+#field {
+    background-color: var(--c-primary-1);
+    border-radius: 0 0 15px 15px;
+    height: 85vh;
+    background-image:
+            repeating-linear-gradient(var(--c-primary-3) 0 1px, transparent 1px 100%),
+            repeating-linear-gradient(90deg, var(--c-primary-3) 0 1px, transparent 1px 100%);
+    background-size: 20px 20px;
+}
+
+#visualize-section {
+    text-align: center;
+}
+.btn {
+    color: var(--c-primary-text);
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid var(--c-primary-3);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 15px;
+    margin: 60px auto;
+    display: inline-block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+    background-color: var(--c-primary-3);
+}
+
+#graph {
+    height: 70vh;
+}
